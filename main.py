@@ -1,14 +1,16 @@
 import os
 from calculator import Calculadora
 
-#função que define as opções disponíveis
-
+#função que padroniza do título do programa
 def titulo():
     print("\t\t\t\tPYTHONLATOR 5000\n\n")
+
+#função que define as opções disponíveis
 def options():
     titulo()
-    print("1-Soma\n2-subtracao\n3-Multiplicação\n4-Divisão\n5-Sair")
+    print("1-Soma\n2-Subtração\n3-Multiplicação\n4-Divisão\n5-Sair")
     option_choice()
+    
 #função que recebe a escolha de ação do usuário
 def option_choice():
    while True:
@@ -74,6 +76,7 @@ def value():
     
     global sm 
     sm = Calculadora(num1,num2)
+    
 #soma
 def soma():
     value()
@@ -87,18 +90,21 @@ def subtracao():
     resultado = sm.subtracao()
     print(f"O resultado é: {resultado}")
     final_choice()
+    
 #multiplicação
 def multiplicacao():
     value()
     resultado = sm.multiplicacao()
     print(f"O resultado é: {resultado}")
     final_choice()
+    
 #divisão
 def divisao():
     value()
     resultado = sm.divisao()
     print(f"O resultado é: {resultado}")
     final_choice()
+
 #função principal
 def main():
     os.system("cls")
